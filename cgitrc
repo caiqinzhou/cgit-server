@@ -1,0 +1,46 @@
+# 网站名称
+site-name=xGit
+# 网站描述
+site-desc=xGit Server
+
+# 启用 README 文件显示
+readme=:README.md
+readme=:readme.txt
+
+# 基础配置
+css=/xspark/cgit/cgit.css
+logo=/xspark/cgit/cgit.png
+favicon=/xspark/cgit/favicon.ico
+virtual-root=/xspark/cgit/
+remove-suffix=0
+enable-index-links=1
+enable-commit-graph=1
+enable-log-filecount=1
+enable-log-linecount=1
+enable-git-config=1
+
+# 缓存设置
+cache-size=0
+cache-root=/var/cache/cgit
+
+# 克隆配置
+clone-url=http://localhost:8080/xspark/git/$CGIT_REPO_URL
+
+# 高亮设置
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+commit-filter=/usr/lib/cgit/filters/commit-links.sh
+
+# 页面设置
+max-stats=year
+max-commit-count=50
+max-repo-count=50
+snapshots=tar.gz tar.bz2 zip
+
+# 项目列表配置
+scan-path=/var/git/repositories
+enable-git-config=1
+side-by-side-diffs=1
+section-sort=1  # 开启树形结构排序
+enable-tree-sort=1  # 开启树形结构排序
+tree-sort=type,name  # 先按类型排序，再按名称排序
